@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">   
+    <title>Face API HOL</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="blog.css" rel="stylesheet">    
+  </head>
+
+  <body>
+    <div class="container">
+
+      <div class="blog-header">
+        <h1 class="blog-title">Face API Hands On Lab</h1>
+        <p class="lead blog-description">Microsoft의 인공지능 서비스인 Face API를 활용하여 사용자를 인증하는 서비스를 만들어봅니다. 간단한 API 호출만으로도 쉽고 빠르게 사진을 이용한 본인확인 서비스를 만들어 보실 수 있습니다. 시작해볼까요?</p>
+      </div>
+
+      <div class="row">
+
+        <div class="col-sm-8 blog-main">
+
+          <div class="blog-post">            
+            <h2>Step2. 미리 촬영한 사진 업로드</h2>
+            
+            <input id="uploadImage" type="file" accept=".jpg, .jpeg, .png"> <br>
+            <img id="displayImage"/>
+            
+            <button id="photoSubmit" class="btn btn-primary" type="button">전송하기</button>
+          </div><!-- /.blog-post -->
+
+          <div class="blog-post">
+              <h3>결과 보기</h3> 
+              <textarea id="photoResult" placeholder="결과값이 표시될 예정입니다" class="form-control" rows="3"></textarea>  
+          </div>
+          <nav>
+            <ul class="pager">
+              <li><a href="home.html">Previous</a></li>
+              <li><a href="takePhoto.html">Next</a></li>
+            </ul>
+          </nav>
+
+        </div><!-- /.blog-main -->
+      </div><!-- /.row -->
+    </div><!-- /.container -->
+
+    <footer class="blog-footer">
+      <p>Blog template built for <a href="http://getbootstrap.com">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+      <p>
+        <a href="#">Back to top</a>
+      </p>
+    </footer>
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="./upload.js"></script>    
+    
+  </body>
+</html>
