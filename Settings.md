@@ -16,19 +16,23 @@
 ## Azure 리소스 
 1. Resource Group 생성
     * Name: face-hol-RG
-    * Location: East Asia 
+    * Location: East Asia
+     
     ![003](./images/s_003.PNG)
 2. App Service Plan 생성
     * App Service Plan: EastAsiaB1
     * Location: East Asia 
     * Pricing tier: B1 Basic
+
     ![005](./images/s_005.PNG)
 3. Web App 생성 
     * App name: face-hol-자신의이니셜
     * App Service plan/Location: EastAsiaB1
+
     ![006](./images/s_006.PNG)
 4. Face API 생성
     * Name: FaceAPI
     * Pricing tier: F0
-    ![007](./images/s_006.PNG)
+
+    ![007](./images/s_007.PNG)
 
