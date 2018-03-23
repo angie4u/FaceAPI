@@ -28,13 +28,8 @@ window.onload = function () {
   // PersonGroup 전송하기 버튼 객체 생성
   var sendPersonGroup = document.getElementById('personGroupSubmit')
   sendPersonGroup.addEventListener('click', function () {
-    // personGroup 생성 요청
-
-    // cognitive 서비스 호출
-    var uriBase = endpoint.value + '/persongroups'
-    var bodyDetail = document.getElementById('inputPersonGroupDesc')
-    var uri = uriBase + '/' + personGroupName.value
-    var body = bodyDetail.value
+    var uri = endpoint.value + '/persongroups/' + personGroupName.value
+    var body = document.getElementById('inputPersonGroupDesc').value
 
     var settings = {
       'url': uri,
@@ -59,11 +54,24 @@ window.onload = function () {
 
   var sendPerson = document.getElementById('personSubmit')
   sendPerson.addEventListener('click', function () {
-    // 알맞은 코드를 채워넣어 보아요 //
+    var uri = endpoint.value + '/persongroups/' + personGroupName2.value + '/persons'
+    var body = document.getElementById('inputPersonDesc').value
+
+    var settings = {
+      'url': uri,
+      'method': 'POST',
+      'headers': {
+        'content-type': 'application/json',
+        'ocp-apim-subscription-key': subscriptionKey.value
+      },
+      'processData': false,
+      'data': body
+    }
 
     $.ajax(settings).done(function (response) {
       console.log(response)
 
+      // 결과값 보여줌
       var jsonToString = JSON.stringify(response, null, '\t')
       document.getElementById('personResult').value = jsonToString
 

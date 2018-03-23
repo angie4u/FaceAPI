@@ -53,7 +53,6 @@ window.onload = function () {
 
     document.getElementById('send').addEventListener('click', function () {
             
-        var uriBase = 'https://westus.api.cognitive.microsoft.com/face/v1.0/detect'
         var params = {
         'returnFaceId': 'true',
         'returnFaceLandmarks': 'false'

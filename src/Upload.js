@@ -6,8 +6,18 @@ window.onload = function () {
 
   document.getElementById('photoSubmit').addEventListener('click', function () {
     var uploadImage = document.getElementById('uploadImage').files[0]
+    var uri = endpoint + '/persongroups/' + personGroupId + '/persons/' + personId + '/persistedFaces'
 
-    // 알맞은 코드를 채워 넣으세요 //
+    var settings = {
+      'url': uri,
+      'method': 'POST',
+      'headers': {
+        'content-type': 'application/octet-stream',
+        'ocp-apim-subscription-key': subscriptionKey
+      },
+      'processData': false,
+      'data': uploadImage
+    }
 
     $.ajax(settings).done(function (response) {
       console.log(response)
