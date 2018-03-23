@@ -17,6 +17,19 @@ window.onload = function () {
   var personDesc = JSON.stringify(personJson, null, '\t')
   document.getElementById('inputPersonDesc').defaultValue = personDesc
 
+  if (sessionStorage.getItem('subscriptionKey') !== null) {
+    subscriptionKey.value = sessionStorage.getItem('subscriptionKey')
+  }
+
+  if (sessionStorage.getItem('endpoint') !== null) {
+    endpoint.value = sessionStorage.getItem('endpoint')
+  }
+
+  if (sessionStorage.getItem('personGroupId') !== null) {
+    personGroupName.value = sessionStorage.getItem('personGroupId')
+    personGroupName2.value = sessionStorage.getItem('personGroupId')
+  }
+
   document.getElementById('inputEndpoint').addEventListener('change', () => {
     sessionStorage.setItem('endpoint', endpoint.value)
   })
