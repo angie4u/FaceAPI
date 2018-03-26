@@ -4,7 +4,7 @@
 ![001](./images/s_001.PNG)
 * [Visual Studio Code](https://code.visualstudio.com/?wt.mc_id=DX_841432) : 코드 에디터
 ![002](./images/s_002.PNG)
-* [Chrome 브라우저](https://www.google.co.kr/chrome/index.html) 
+* [Chrome 브라우저](https://www.google.co.kr/chrome/index.html)![008](./images/chrome.jpg)
 
 ## Azure Pass 등록
 * aka.ms/azurepass(https://www.microsoftazurepass.com/) 에서 등록 가능 

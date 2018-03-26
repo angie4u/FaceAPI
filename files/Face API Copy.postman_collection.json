@@ -1,0 +1,211 @@
+{
+	"info": {
+		"_postman_id": "d9fac054-0f4a-4c3d-a497-2940b7e5c03d",
+		"name": "Face API Copy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Person Group",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"value": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"group1\",\r\n    \"userData\": \"user-provided data attached to the person group.\"\r\n}"
+				},
+				"url": {
+					"raw": "https://eastasia.api.cognitive.microsoft.com/face/v1.0/persongroups/group1",
+					"protocol": "https",
+					"host": [
+						"eastasia",
+						"api",
+						"cognitive",
+						"microsoft",
+						"com"
+					],
+					"path": [
+						"face",
+						"v1.0",
+						"persongroups",
+						"group1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Person",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"value": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"person1\",\r\n    \"userData\": \"User-provided data attached to the person.\"\r\n}"
+				},
+				"url": {
+					"raw": "https://eastasia.api.cognitive.microsoft.com/face/v1.0/persongroups/group1/persons",
+					"protocol": "https",
+					"host": [
+						"eastasia",
+						"api",
+						"cognitive",
+						"microsoft",
+						"com"
+					],
+					"path": [
+						"face",
+						"v1.0",
+						"persongroups",
+						"group1",
+						"persons"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Person Face",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/octet-stream"
+					},
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"value": ""
+					}
+				],
+				"body": {
+					"mode": "file",
+					"file": {}
+				},
+				"url": {
+					"raw": "https://eastasia.api.cognitive.microsoft.com/face/v1.0/persongroups/group1/persons/personId/persistedFaces",
+					"protocol": "https",
+					"host": [
+						"eastasia",
+						"api",
+						"cognitive",
+						"microsoft",
+						"com"
+					],
+					"path": [
+						"face",
+						"v1.0",
+						"persongroups",
+						"group1",
+						"persons",
+						"personId",
+						"persistedFaces"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Face Detect",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/octet-stream"
+					},
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"value": ""
+					}
+				],
+				"body": {
+					"mode": "file",
+					"file": {}
+				},
+				"url": {
+					"raw": "https://eastasia.api.cognitive.microsoft.com/face/v1.0/detect?returnFaceId=true&returnFaceLandmarks=false",
+					"protocol": "https",
+					"host": [
+						"eastasia",
+						"api",
+						"cognitive",
+						"microsoft",
+						"com"
+					],
+					"path": [
+						"face",
+						"v1.0",
+						"detect"
+					],
+					"query": [
+						{
+							"key": "returnFaceId",
+							"value": "true"
+						},
+						{
+							"key": "returnFaceLandmarks",
+							"value": "false"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Verify",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"value": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"faceId\": \"\",\r\n    \"personId\": \"\",\r\n    \"personGroupId\": \"group1\"\r\n}\r\n"
+				},
+				"url": {
+					"raw": "https://eastasia.api.cognitive.microsoft.com/face/v1.0/verify",
+					"protocol": "https",
+					"host": [
+						"eastasia",
+						"api",
+						"cognitive",
+						"microsoft",
+						"com"
+					],
+					"path": [
+						"face",
+						"v1.0",
+						"verify"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
